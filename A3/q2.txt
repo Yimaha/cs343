@@ -1,0 +1,53 @@
+bi)
+CBEGIN:
+0: 15.65u 1.73s 0:17.31 2348188kb
+1: 17.55u 2.98s 0:10.94 2348248kb
+2: 18.97u 4.35s 0:07.07 2348324kb
+3: 19.19u 1.36s 0:04.08 2348296kb
+4: 22.10u 1.58s 0:03.46 2348408kb
+5: 34.36u 1.65s 0:03.23 2346388kb
+
+TASK:
+0: 16.20u 1.61s 0:17.74 2348244kb
+1: 16.78u 1.41s 0:09.65 2348324kb
+2: 18.79u 3.55s 0:06.81 2348376kb
+3: 19.71u 2.09s 0:05.07 2348308kb
+4: 21.16u 1.31s 0:03.26 2347140kb
+5: 35.13u 1.70s 0:03.35 2346536kb
+
+ACTOR:
+0: 16.34u 2.32s 0:18.60 2348200kb
+1: 18.51u 3.77s 0:11.60 2348400kb
+2: 21.94u 4.19s 0:07.20 2348248kb
+3: 43.14u 2.70s 0:06.53 2348128kb
+4: 56.78u 1.94s 0:04.54 2347896kb
+5: 107.96u 1.92s 0:04.34 2346608kb
+
+We observe that as the number of depth increases,
+real time decreases and user mode time increases.
+
+This make sense, though the actual time for completing the 
+code is faster, more thread is used and each of them
+spend some time in the user mode, which adding up to result 
+in an increase in user mode time.
+
+bii)
+With respect to scaling, greater number of processor obviously increase the performance
+of the program, where it started around 18 real seconds to complete the program, and ended
+up becoming around 3 - 4 seconds for all three cases.
+
+Through all 3 approaches, ACTOR received less amount of increment, while
+CBEGIN and TASK received a similar level of increment that is a bit more than ACTOR. 
+Though due to the nature of the algorithm (each layer increase 2^n objects) the difference
+become bigger and bigger as amount of depth increases.
+
+biii)
+A potential reason why TASK and CBEGIN has very close performance 
+is due to how it is coded and functions. within the code, they 
+essentially perform the same task, has the same synchronizatoin point,
+which explains why therperformance are similar (TASK mimic CBEGIN)
+
+For Actor, unlike TASK/CBEGIN, it relies on msg passing, procesing, which is much 
+more complex and time costing for context swtiching. This grows bad as depth increases
+and number of actors increases exponentially. Thus, it has worse performance 
+when compared to TASK and CBEGIN.

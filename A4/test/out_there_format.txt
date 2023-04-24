@@ -1,0 +1,165 @@
+V0      V1      V2      V3      V4      V5      V6      V7      V8      V9      V10     V11     V12     V13     V14     V15     V16     V17     V18     V19     
+******* ******* ******* ******* ******* ******* ******* ******* ******* ******* ******* ******* ******* ******* ******* ******* ******* ******* ******* ******* 
+                        S               S                                                       S                               S                       S       
+                        V 0,2,1                                                                                                                                 
+                        B 1                                                                             S       S                                               
+                                                                                                                V 2,0,1                                         
+        S                               V 2,1,0                                                                 B 2                                             
+                                        B 3                                                     V 0,1,2                                                         
+                                                                                                B 4                                             S       V 1,0,2 
+                                                                                                                        S       V 1,2,0                 B 5     
+                                                                        S                                                       B 6             V 1,0,2         
+        V 2,1,0                                                                                                                                 B 7             
+        B 8                                                                                             V 0,2,1                                                 
+                                                                                                        B 9             V 1,0,2                                 
+                                                                        V 1,0,2                                         B 10            S                       
+                                                                        B 11                                                            V 1,2,0                 
+S                                                                                       S                                               B 12                    
+                                                                                        V 2,1,0                                                                 
+V 2,1,0                                         S       S       S                       B 13                                                                    
+B 14            S                               V 0,2,1                                                                                                         
+U 13                            S               C p                             S                                                                               
+                                                G p 1                                                                                                           
+G p 1                                           S                                       U 12                                                                    
+S                                                                       U 10                                                            U 11                    
+                                                                        G p 1                                                                                   
+                                                                        S                                                               G p 1                   
+                                                                                                                        U 9             S                       
+                                                                                                                        G p 1                                   
+                                                                                                        U 8             S                                       
+                                                                                                        G p 1                                                   
+                                                                                        G p 1           S                                                       
+        U 7                                                                             S                                       U 5             U 6             
+                                                                                                                                                G p 1           
+        G p 1                                                                                                                                   S               
+        S                                                                                       U 3                                                     U 4     
+                                                                                                G p 1                                                           
+                                                                                                S                                                       G p 1   
+                                                                                                                                G p 1                   S       
+                                        U 2                                                                                     S                               
+                                        G p 1                                                                                                                   
+                                        S                                                                       U 1                                             
+                                                                                                                G p 1                                           
+                        U 0     V 1,2,0                                                                         S                                               
+                        G p 1   B 1                                                                                                                             
+                        S                               V 2,1,0                                                                                                 
+                                                        B 2     V 1,2,0                                                                                         
+                                                                B 3             V 2,0,1                                                                         
+                                                V 2,0,1                         B 4                                                                             
+                V 2,1,0                         B 5                                                                                                             
+V 2,1,0         B 6                                                                                                                                             
+B 7                                                                                                                                     V 2,0,1                 
+                                                                                                                        V 1,0,2         B 8                     
+                                                                        V 0,1,2                                         B 9                                     
+                                                                        B 10                                                                    V 2,0,1         
+                                                                                                        V 1,2,0                                 B 11            
+                                                                                        V 2,0,1         B 12                                                    
+        V 1,0,2                                                                         B 13                                                                    
+        B 14                            V 2,1,0                                                                                                                 
+        U 13                            C p                                             U 12                                                                    
+                                                                                        G p 2                                                                   
+                                        G p 2                                           S                                                                       
+        G p 2                           S                                                               U 11                                                    
+        S                                                               U 9                                                                     U 10            
+                                                                                                                                                G p 2           
+                                                                                                        G p 2           U 8             U 7     S               
+U 6                                                                                                     S                               G p 2                   
+                U 5                                                                                                     G p 2           S                       
+                                                                        G p 2                                           S                                       
+                G p 2                           U 4                     S       U 3                                                                             
+G p 2           S                                                                                                                                               
+S                                                               U 2             G p 2                                                                           
+                                                        U 1                     S                                                                               
+                                                        G p 2                                                                                                   
+                                                G p 2   S                                                                                                       
+                                U 0             S               G p 2                                                                                           
+                                                                S                                                                                       V 1,0,2 
+                                G p 2                                                                                                                   B 1     
+                                S                                                                                               V 1,2,0                         
+                                                                                                V 1,0,2                         B 2                             
+                                                                                                B 3             V 2,1,0                                         
+                        V 1,2,0                                                                                 B 4                                             
+                        B 5                                                             V 1,0,2                                                                 
+                                        V 2,0,1                                         B 6                                                                     
+        V 0,2,1                         B 7                                                                                                                     
+        B 8                                                                                                                             V 0,1,2                 
+                                                                                                                                        B 9     V 1,2,0         
+                                                                                                        V 0,2,1                                 B 10            
+                                                                                                        B 11            V 1,2,0                                 
+                                                                        V 0,1,2                                         B 12                                    
+                                                        V 1,0,2         B 13                                                                                    
+                                                        B 14                    V 2,1,0                                                                         
+                                                        U 13            U 12    C s                                                                             
+                                                                        G s 3                                                                                   
+                                                                        S       G s 3                                                                           
+                                                                                S                       U 10            U 11                    U 9             
+                                                                                                                        G s 3                                   
+                                                        G s 3                                                           S                                       
+        U 7                             U 6             S                                                                               U 8                     
+                                        G s 3                                                                                                                   
+        G s 3                           S                                                                                                                       
+        S                                                                                               G s 3                                                   
+                                                                                        U 5             S                                                       
+                                                                                        G s 3                                                                   
+                                                                                        S                                                       G s 3           
+                        U 4                                                                                                             G s 3   S               
+                        G s 3                                                                                   U 3                     S                       
+                        S                                                                       U 2             G s 3                                           
+                                                                                                G s 3           S               U 1                             
+                                                                                                S                                                       U 0     
+                                                                                                                                                        G s 3   
+                V 2,0,1                                                                                                                                 S       
+                B 1                                                                                                             G s 3                           
+                                                V 2,1,0                                                                         S                               
+V 0,2,1                                         B 2                                                                                                             
+B 3                                                             V 2,1,0                                                                                         
+                                V 1,0,2                         B 4                                                                                             
+                                B 5                                             V 2,0,1                                                                         
+                                                                        V 2,1,0 B 6                                                                             
+                                                                        B 7                                             V 0,2,1                                 
+                                                        V 1,0,2                                                         B 8                                     
+        V 2,0,1                                         B 9                                                                                                     
+        B 10                                                                                                                            V 2,1,0                 
+                                                                                        V 2,0,1                                         B 11                    
+                                        V 2,0,1                                         B 12                                                                    
+                        V 1,0,2         B 13                                                                                                                    
+                        B 14                                                                                                                    V 2,0,1         
+                        U 13                                                                                                                    C p             
+                        G p 4                                                                                                                                   
+                        S               U 12                                            U 11                                            U 10    G p 4           
+        U 9                             G p 4           U 8                             G p 4                           U 7                                     
+        G p 4                                           G p 4           U 6                                             G p 4           G p 4                   
+                                U 4                     S                       U 5                                                                             
+                                G p 4                                                                                                                           
+                                S                               U 3             G p 4                                                                           
+U 2             U 0                             U 1                     G p 4   S                                                                               
+                                                G p 4                                                                                                           
+G p 4                                           S                                                                                                               
+S                                                                                                       V 2,0,1                                                 
+                                                                G p 4                                   B 1                                                     
+                                                                S                               V 0,2,1                                                         
+                                                                                                B 2             V 1,0,2                                         
+                                                                                                                B 3             V 1,2,0                         
+                G p 4                                                                                                           B 4                             
+                S                                                                                                                                       V 0,2,1 
+                        V 1,0,2         T                                                                                                       T       B 5     
+X       T       X       B 6     X               X       X       X               X       T                                               T                       
+                D                                                                                                                                               
+                T                                               D                                                                                               
+                                                D               T                                                                                               
+                                                T                               D                                                                               
+D                                                                               T                                                                               
+T                                                       D                                                                                                       
+                                D                       T                                                                                                       
+                                T                                       D                                                                                       
+                                                                        T                                               D                                       
+                        U 5                                                                                             T                                       
+                        X                                                                                                                               U 4     
+                                                                                                                                U 3                     X       
+                                                                                                                U 2             X                               
+                                                                                                U 1             X                                               
+                                                                                                X       U 0                                                     
+                        T                                                                       T       X       T               T                       T       
+                                                                                                        T                                                       
+*****************                                                                                                                                               
+All tours started                                                                                                                                               

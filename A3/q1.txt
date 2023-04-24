@@ -1,0 +1,62 @@
+
+
+Q1 a)
+
+Task set = 1
+
+DARRAY:1.75u 0.00s 0:01.75r 5116kb, malloc = 20,000,072
+VECTOR1:1.75u 0.00s 0:01.75r 5116kb, malloc = 20,000,072
+VECTOR2:13.17u 0.03s 0:13.16r 4700kb, malloc = 160,000,072
+STACK:1.00u 0.01s 0:01.01r 4880kb, malloc = 72
+
+
+Task set = 2
+
+DARRAY:10.48u 0.02s 0:05.37r 4704kb, malloc = 40,000,078
+VECTOR1:16.92u 0.00s 0:08.45r 4912kb, malloc = 40,000,078
+VECTOR2:101.56u 0.14s 0:50.82r 5008kb, malloc = 320,000,078
+STACK:2.20u 0.01s 0:01.11r 4860kb, malloc = 78
+
+Task set = 4
+
+DARRAY:56.19u 0.03s 0:14.32r 4932kb, malloc = 80,000,090
+VECTOR1:73.36u 0.07s 0:18.43r 5088kb, malloc = 80,000,090
+VECTOR2:450.82u 0.75s 1:53.03r 5216kb, malloc = 640,000,090
+STACK:4.32u 0.00s 0:01.08r 4760kb, malloc = 90
+
+
+To compare the user and real time, though it is slightly weird at first it looks like the user time is much 
+greater than the real time. However, it makes sense though, since we are using 2 cpu. We observe that the 
+user time is approximately 2 times the real time through all 4 cases for Task set = 2, similar case for Task set = 1 and 4 too
+
+Q1b)
+Performance:
+Through scaling the Task, Each task obviously takes more time in the user space (as there are physically more jobs to do),
+but in order to evaluate performance we should look at the change of real time cost of each thread due to change of Task set size
+
+For DARRAY, VECTOR1, VECTOR2, we call a significant performance decrease as the number of tasks increase. each thread ended up
+taking more time to complete their own task which add up a lot of overall cost. 
+
+FROM Task set = 1 to Task set = 2, we see a 4 - 8 times increment of time per thread (prob due to significant more context switching), 
+while for  Task set = 2 to Task set = 4, the increment is around 2 - 3 times per thread. Still, this is not a good news 
+
+However, for array on stack, which is a really light weight datatype, the performance of individual thread experience minior performance 
+decrement due to the increase number of tasks!
+
+Allocation Different:
+Adding more task obviously adds more allocation, it is identical for DARRAY, VECTOR1, VECTOR2, where 
+DARRAY and VECTOR1 cost 40,000,000 malloc per task + 6 additional malloc per task for some overhead, and 
+VECOTR2 which is a vector of non-fixed size cost around 160,000,000 malloc per task with the same overhead
+
+However, for STACK, because the data is stored on the stack, except the +6 overhead, it actually doesn't have any
+other malloc called. Out of all 4 approaches, STACK has the least amount of increment in malloc calls due to task size change
+
+Q1C)
+The obvious reason why STACK scales much better than all other implementation is due to the lack of malloc calls. 
+Pointer is not used in the STACK implementation which means most of the operation can easily avoid malloc which is 
+an expensive call if you call them millions of time per execution. Also, due to the simplicity of STACK, the chances
+of a routine get cut off midway is much lower(less command to run), thus the amount of context switching decreases as well.
+
+
+
+

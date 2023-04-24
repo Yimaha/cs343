@@ -1,0 +1,16 @@
+    // test codes
+    // printer.print(0, Voter::States::Start);
+    // printer.print(2, Voter::States::Start);
+    // printer.print(3, Voter::States::Start);
+    // TallyVotes::Tour tour = {TallyVotes::TourKind::Picture, 2};
+    // printer.print(4, Voter::States::Complete, tour);
+    // tour = {TallyVotes::TourKind::Picture, 2};
+    // // printer.print(1, Voter::States::Going, tour);
+    // printer.print(3, Voter::States::Start);
+    // printer.print(1, Voter::States::Block, 30);
+    // printer.print(2, Voter::States::Unblock, 30);
+    // printer.print(4, Voter::States::Block, 30);
+    // TallyVotes::Ballot vote = {0 , 1, 2};
+    // printer.print(5, Voter::States::Vote, vote);
+    // printer.print(0, Voter::States::Barging, 30, 1);
+    // printer.print(1, Voter::States::Failed);

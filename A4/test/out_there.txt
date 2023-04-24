@@ -1,0 +1,30 @@
+V0	V1	V2	V3	V4	V5
+*******	*******	*******	*******	*******	*******
+			S		S
+					V 1,0,2
+	S		V 0,1,2		B 1
+	V 0,1,2		B 2
+	C g
+	G g 1
+	S		U 0		U 1
+	V 2,1,0
+	B 1				G g 1
+S			G g 1		S
+			S		V 0,1,2
+V 0,1,2					B 2
+C g
+G g 2
+S	U 1
+	G g 2	S	b 1 2		U 0
+b 2 2	T	b 3 2	V 1,2,0	S	G g 2
+V 1,2,0			B 1	b 3 2	T
+B 2		V 2,1,0
+U 0		C s	U 1	V 1,2,0
+			G s 3	B 1
+		G s 3	T
+G s 3		S
+T				U 0
+		X		X
+		T		T
+*****************
+All tours started

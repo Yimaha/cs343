@@ -1,0 +1,3 @@
+randcnt 599911191
+normal result 3.2703e+17 exception results -256092 -673302367 -1541482078
+calls 99970354 exceptions 9951 9873 9822

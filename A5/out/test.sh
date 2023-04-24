@@ -1,0 +1,15 @@
+make clean
+make vote VIMPL=EXT OUTPUT=NOOUTPUT
+./vote 100 10 20000 1003
+make clean
+make vote VIMPL=INT OUTPUT=NOOUTPUT
+./vote 100 10 20000 1003
+make clean
+make vote VIMPL=INTB OUTPUT=NOOUTPUT
+./vote 100 10 20000 1003
+make clean
+make vote VIMPL=AUTO OUTPUT=NOOUTPUT
+./vote 100 10 20000 1003
+make clean
+make vote VIMPL=TASK OUTPUT=NOOUTPUT
+./vote 100 10 20000 1003

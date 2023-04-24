@@ -1,0 +1,10 @@
+'(x)' : '(x)' : yes.
+'(xxx)' : '(xxx)' : yes.
+'(x[abab])' : '(x[abab])' : yes.
+'(x[ab(x)])' : '(x[ab(x)])' : yes.
+'(x[ab(x)(x)ab(x[ab]x)])' : '(x[ab(x)(x)ab(x[ab]x)])' : yes.
+'(a)' : '(a' ’: no. Extra characters ')'
+'(xxa)' : '(xxa' ’: no. Extra characters ')'
+'([])' : '([' ’: no. Extra characters '])'
+'(x[ab[x]])' : '(x[ab[' ’: no. Extra characters 'x]])'
+'(x[ab(x)(x)ab(x(ab)x)])' : '(x[ab(x)(x)ab(x(' ’: no. Extra characters 'ab)x)])'

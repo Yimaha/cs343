@@ -1,0 +1,39 @@
+
+1bi) 
+What I noticed, and verified after googling a bit online, is that throw will trigger
+the destructor of objects within the original routine normally, while longjmp has undefined 
+behaviour. In our case, the destructor ~T() is only called in 
+./throwcatch, while the ./longjmp version does not call the destructor ~T() ever.
+
+Referencing back to the course note, it seems like the root cause of this issue is potentially
+due to jmp immediately terminating the stack, while trycatch will properly propegate through 
+routine and routine caller in order to handle the exception, which also means it does proper clean
+up such as calling the destructor correctly.
+
+1bii)
+The 4 timing results are:
+---regular---
+./throwcatch 11.19u 0.00s 0:11.20
+./longjmp 3.09u 0.00s 0:03.09
+---with -O2---
+./throwcatch 10.75u 0.00s 0:10.75
+./longjmp 2.43u 0.00s 0:02.44
+
+1biii)
+There seems to be a significant difference between the original program and 
+the transformed one, where ./longjmp is significantly faster than ./throwcatch.
+
+This is expected, since as explained in 1bi), ./longjmp doesn't call the destructor,
+which means it is missing some of the necessary cleanup steps performed by ./trycatch,
+making it an inconsistent practice. 
+
+In general (or in my opinion), this means longjmp is almost not usable since majority of the program
+in C++ has objects (in fact, a lot of objects in the same routine) and a proper cleanup
+is almost necessary if any exception is triggered.
+
+1biv)
+Though performanced improved for both program, there is still a big gap between them.
+longjmp is still significantly faster, but still, as mentioned before, In general I would
+still perfer throwcatch instead of using longjmp to avoid the "missing destructor" scenerio.
+
+

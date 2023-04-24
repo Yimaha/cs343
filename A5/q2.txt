@@ -1,0 +1,38 @@
+
+
+bi)
+
+        Single Processor                |   double Proccessor
+
+EXT     2.74u 0.03s 0:02.77r 35348kb    |   43.80u 0.05s 0:21.90r 35304kb
+INT     2.65u 0.01s 0:02.66r 35580kb    |   43.82u 0.10s 0:21.93r 35308kb
+INTB    3.32u 0.06s 0:03.38r 35404kb    |   50.12u 0.09s 0:25.09r 35256kb
+AUTO    3.99u 0.04s 0:04.02r 35444kb    |   52.20u 0.09s 0:26.12r 35440kb
+TASK    2.48u 0.02s 0:02.50r 35404kb    |   39.42u 0.11s 0:19.75r 35512kb
+
+The TASK, EXT, INT suppose to have a much better performance when it compared to all other 
+solution for obvious reasons, INTB is a simulation of JAVA's horrible version of Mutual exclusion,
+we had to handle a lot of edge cases where baring comes in when it is not supposed to happen.
+
+On the other hand, we also see that AUTO has pretty bad perforamnce, it is also true since 
+waitUntil has the property of easy to implement (which is true, I had little friction when adapting)
+but the downside is that it doesn't scale.
+
+However, it is also surprising to me that TASk seems to even be slightly ahead of INT and EXT 
+in this case.
+
+bii)
+Everyone suffers from having multiple procesors. there is no exception to any implementation. 
+In the 1 processor case every one is able to finish quiet efficiently, under 5 seconds in general.
+In the 2 processor case, it seems like the thread took too much resources for context swithcing
+and took way too long to complete
+
+biii)
+based on the data, it seems like task is the most efficient, it could be the reason why direct communication
+is prefered because TASK is the only implementation that uses direct communication instead of indirect communication
+
+On the other hand, it is also nice to see that the 2 suppsively worse approach did not perform well. (INTB, AUTO)
+
+In terms of number of professor, since everyone degraded, it is obvious that introducing context swithcing for
+ony 2 thread is not worth it. The is especially bad if I only have 1 real cpu unit, as context switching lose
+it's meaning (it makes the processing slower as suppose to faster).

@@ -1,0 +1,36 @@
+V0	V1	V2	V3	V4	V5	V6	V7
+*******	*******	*******	*******	*******	*******	*******	*******
+					S
+					V 2,1,0
+					B 1		S
+							V 0,2,1
+S							B 2
+V 0,2,1
+B 3			S
+			V 0,1,2
+	S	S	B 4	S
+	V 1,0,2
+	B 5	V 0,2,1				S
+		C s	U 4
+			G s 1
+		G s 1	S
+		S			U 2		U 3
+							G s 1
+U 1							S
+G s 1
+S	U 0			V 0,1,2
+				B 1	G s 1
+					S	V 2,0,1
+			V 1,0,2			B 2
+	G s 1		B 3
+V 2,1,0	S
+B 4							V 0,1,2
+		V 2,1,0					B 5
+U 4		C g
+G g 2		G g 2	U 1	U 2		U 3	U 0
+					V 2,1,0		G g 2
+			G g 2		B 1	G g 2
+	V 0,2,1					S
+	B 2			G g 2
+T		T	T	S		X	T
+				X		T

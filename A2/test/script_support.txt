@@ -1,0 +1,3 @@
+./filter ./test/input.txt ./test/output.txt
+./filter -c l ./test/input.txt ./test/output.txt
+./filter -c u ./test/input.txt ./test/output.txt

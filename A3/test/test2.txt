@@ -1,0 +1,435 @@
+creating produder
+creating consumers
+deleting producers
+Producer: 0x560285b7d5f0 have started
+Producer: 0x560285b7d5f0 attemp to insert
+1 0x560285b7d5f0 1 1 1 1
+1 0 0 1 1 1
+Producer: 0x560285b7d5f0 finished to insert
+Producer: 0x560285b7d5f0 attemp to insert
+2 0x560285b7d5f0 1 1 1 1
+2 0 0 1 1 1
+Producer: 0x560285b7d5f0 finished to insert
+Producer: 0x560285b7d5f0 attemp to insert
+3 0x560285b7d5f0 1 1 1 1
+3 0 0 1 1 1
+Producer: 0x560285b7d5f0 finished to insert
+Producer: 0x560285b7d5f0 attemp to insert
+4 0x560285b7d5f0 1 1 1 1
+4 0 0 1 1 1
+Producer: 0x560285b7d5f0 finished to insert
+Producer: 0x560285b7d5f0 attemp to insert
+5 0x560285b7d5f0 1 1 1 1
+5 0 0 1 1 1
+Producer: 0x560285b7d5f0 finished to insert
+Producer: 0x560285b7d5f0 attemp to insert
+6 0x560285b7d5f0 1 1 1 1
+6 0 0 1 1 1
+Producer: 0x560285b7d5f0 finished to insert
+Producer: 0x560285b7d5f0 attemp to insert
+7 0x560285b7d5f0 1 1 1 1
+7 0 0 1 1 1
+Producer: 0x560285b7d5f0 finished to insert
+Producer: 0x560285b7d5f0 attemp to insert
+8 0x560285b7d5f0 1 1 1 1
+8 0 0 1 1 1
+Producer: 0x560285b7d5f0 finished to insert
+Producer: 0x560285b7d5f0 attemp to insert
+9 0x560285b7d5f0 1 1 1 1
+9 0 0 1 1 1
+Producer: 0x560285b7d5f0 finished to insert
+Producer: 0x560285b7d5f0 attemp to insert
+10 0x560285b7d5f0 1 1 1 1
+10 0 0 1 1 1
+Producer: 0x560285b7d5f0 finished to insert
+Producer: 0x560285b7d5f0 have ended
+Producer: 0x560285bbd900 have started
+Producer: 0x560285bbd900 attemp to insert
+Producer: 0x560285bfdc10 have started
+Producer: 0x560285bfdc10 attemp to insert
+Consumer: 0x560285c3df20 have started
+Consumer: 0x560285c3df20 attemp to remove
+Consumer: 0 enters0
+Consumer: 0x560285c3df20 got the lock
+Consumer: 0x560285c3df20 exit the lock 
+0x560285b78fb0 9 0x560285c3df20 1 0 1 0
+0x560285b78fb0 9 0x560285bbd900 1 0 1 0
+Consumer: 0x560285c3df20 finished remove
+Consumer: 0x560285c3df20 1 -1
+Consumer: 0x560285c3df20 attemp to remove
+Consumer: 0x560285bbd900 enters1
+Consumer: 0x560285c7e2b0 have started
+Consumer: 0x560285c7e2b0 attemp to remove
+Consumer: 0x560285bbd900 enters1
+Consumer: 0x560285cbe640 have started
+Consumer: 0x560285cbe640 attemp to remove
+Consumer: 0x560285bbd900 enters1
+Consumer: 0x560285cfe9d0 have started
+Consumer: 0x560285cfe9d0 attemp to remove
+Consumer: 0x560285bbd900 enters1
+Consumer: 0x560285d3ed60 have started
+Consumer: 0x560285d3ed60 attemp to remove
+Consumer: 0x560285bbd900 enters1
+10 0x560285bbd900 1 0 1 1
+10 0x560285c3df20 1 0 1 1
+Producer: 0x560285bbd900 finished to insert
+Producer: 0x560285bbd900 attemp to insert
+Consumer: 0x560285c3df20 got the lock
+Consumer: 0x560285c3df20 exit the lock 
+0x560285b78fb0 9 0x560285c3df20 1 1 1 0
+0x560285b78fb0 9 0x560285c7e2b0 1 1 1 0
+Consumer: 0x560285c3df20 finished remove
+Consumer: 0x560285c3df20 2 -1
+Consumer: 0x560285c3df20 attemp to remove
+Consumer: 0x560285c7e2b0 enters1
+Consumer: 0x560285c7e2b0 got the lock
+Consumer: 0x560285c7e2b0 is getting locked 
+Consumer: 0x560285cbe640 got the lock
+Consumer: 0x560285cbe640 is getting locked 
+Consumer: 0x560285cfe9d0 got the lock
+Consumer: 0x560285cfe9d0 is getting locked 
+Consumer: 0x560285d3ed60 got the lock
+Consumer: 0x560285d3ed60 is getting locked 
+10 0x560285bfdc10 1 0 0 0
+10 0x560285c3df20 1 0 0 0
+Producer: 0x560285bfdc10 finished to insert
+Producer: 0x560285bfdc10 attemp to insert
+Consumer: 0x560285c3df20 got the lock
+Consumer: 0x560285c3df20 is getting locked 
+Consumer: 0x560285c7e2b0 exit the lock 
+0x560285b78fb0 9 0x560285c7e2b0 1 1 0 0
+0x560285b78fb0 9 0x560285bfdc10 1 1 0 0
+Consumer: 0x560285c7e2b0 finished remove
+Consumer: 0x560285c7e2b0 3 -1
+Consumer: 0x560285c7e2b0 attemp to remove
+Consumer: 0x560285bfdc10 enters1
+10 0x560285bbd900 1 0 0 0
+10 0x560285c7e2b0 1 0 0 0
+Producer: 0x560285bbd900 finished to insert
+Producer: 0x560285bbd900 attemp to insert
+Consumer: 0x560285c7e2b0 got the lock
+Consumer: 0x560285c7e2b0 is getting locked 
+Consumer: 0x560285cbe640 exit the lock 
+0x560285b78fb0 9 0x560285cbe640 1 1 0 0
+0x560285b78fb0 9 0x560285bbd900 1 1 0 0
+Consumer: 0x560285cbe640 finished remove
+Consumer: 0x560285cbe640 4 -1
+Consumer: 0x560285cbe640 attemp to remove
+Consumer: 0x560285bbd900 enters1
+10 0x560285bfdc10 1 0 0 0
+10 0x560285cbe640 1 0 0 0
+Producer: 0x560285bfdc10 finished to insert
+Producer: 0x560285bfdc10 attemp to insert
+Consumer: 0x560285cbe640 got the lock
+Consumer: 0x560285cbe640 is getting locked 
+Consumer: 0x560285cfe9d0 exit the lock 
+0x560285b78fb0 9 0x560285cfe9d0 1 1 0 0
+0x560285b78fb0 9 0x560285bfdc10 1 1 0 0
+Consumer: 0x560285cfe9d0 finished remove
+Consumer: 0x560285cfe9d0 5 -1
+Consumer: 0x560285cfe9d0 attemp to remove
+Consumer: 0x560285bfdc10 enters1
+10 0x560285bbd900 1 0 0 0
+10 0x560285cfe9d0 1 0 0 0
+Producer: 0x560285bbd900 finished to insert
+Producer: 0x560285bbd900 attemp to insert
+Consumer: 0x560285cfe9d0 got the lock
+Consumer: 0x560285cfe9d0 is getting locked 
+Consumer: 0x560285d3ed60 exit the lock 
+0x560285b78fb0 9 0x560285d3ed60 1 1 0 0
+0x560285b78fb0 9 0x560285bbd900 1 1 0 0
+Consumer: 0x560285d3ed60 finished remove
+Consumer: 0x560285d3ed60 6 -1
+Consumer: 0x560285d3ed60 attemp to remove
+Consumer: 0x560285bbd900 enters1
+10 0x560285bfdc10 1 0 0 0
+10 0x560285d3ed60 1 0 0 0
+Producer: 0x560285bfdc10 finished to insert
+Producer: 0x560285bfdc10 attemp to insert
+Consumer: 0x560285d3ed60 got the lock
+Consumer: 0x560285d3ed60 is getting locked 
+Consumer: 0x560285c3df20 exit the lock 
+0x560285b78fb0 9 0x560285c3df20 1 1 0 0
+0x560285b78fb0 9 0x560285bfdc10 1 1 0 0
+Consumer: 0x560285c3df20 finished remove
+Consumer: 0x560285c3df20 7 -1
+Consumer: 0x560285c3df20 attemp to remove
+Consumer: 0x560285bfdc10 enters1
+10 0x560285bbd900 1 0 0 0
+10 0x560285c3df20 1 0 0 0
+Producer: 0x560285bbd900 finished to insert
+Producer: 0x560285bbd900 attemp to insert
+Consumer: 0x560285c3df20 got the lock
+Consumer: 0x560285c3df20 is getting locked 
+Consumer: 0x560285c7e2b0 exit the lock 
+0x560285b78fb0 9 0x560285c7e2b0 1 1 0 0
+0x560285b78fb0 9 0x560285bbd900 1 1 0 0
+Consumer: 0x560285c7e2b0 finished remove
+Consumer: 0x560285c7e2b0 8 -1
+Consumer: 0x560285c7e2b0 attemp to remove
+Consumer: 0x560285bbd900 enters1
+10 0x560285bfdc10 1 0 0 0
+10 0x560285c7e2b0 1 0 0 0
+Producer: 0x560285bfdc10 finished to insert
+Producer: 0x560285bfdc10 attemp to insert
+Consumer: 0x560285c7e2b0 got the lock
+Consumer: 0x560285c7e2b0 is getting locked 
+Consumer: 0x560285cbe640 exit the lock 
+0x560285b78fb0 9 0x560285cbe640 1 1 0 0
+0x560285b78fb0 9 0x560285bfdc10 1 1 0 0
+Consumer: 0x560285cbe640 finished remove
+Consumer: 0x560285cbe640 9 -1
+Consumer: 0x560285cbe640 attemp to remove
+Consumer: 0x560285bfdc10 enters1
+10 0x560285bbd900 1 0 0 0
+10 0x560285cbe640 1 0 0 0
+Producer: 0x560285bbd900 finished to insert
+Producer: 0x560285bbd900 attemp to insert
+Consumer: 0x560285cbe640 got the lock
+Consumer: 0x560285cbe640 is getting locked 
+Consumer: 0x560285cfe9d0 exit the lock 
+0x560285b78fb0 9 0x560285cfe9d0 1 1 0 0
+0x560285b78fb0 9 0x560285bbd900 1 1 0 0
+Consumer: 0x560285cfe9d0 finished remove
+Consumer: 0x560285cfe9d0 10 -1
+Consumer: 0x560285cfe9d0 attemp to remove
+Consumer: 0x560285bbd900 enters1
+10 0x560285bfdc10 1 0 0 0
+10 0x560285cfe9d0 1 0 0 0
+Producer: 0x560285bfdc10 finished to insert
+Producer: 0x560285bfdc10 attemp to insert
+Consumer: 0x560285cfe9d0 got the lock
+Consumer: 0x560285cfe9d0 is getting locked 
+Consumer: 0x560285d3ed60 exit the lock 
+0x560285b78fb0 9 0x560285d3ed60 1 1 0 0
+0x560285b78fb0 9 0x560285bfdc10 1 1 0 0
+Consumer: 0x560285d3ed60 finished remove
+Consumer: 0x560285d3ed60 1 -1
+Consumer: 0x560285d3ed60 attemp to remove
+Consumer: 0x560285bfdc10 enters1
+10 0x560285bbd900 1 0 0 0
+10 0x560285d3ed60 1 0 0 0
+Producer: 0x560285bbd900 finished to insert
+Producer: 0x560285bbd900 attemp to insert
+Consumer: 0x560285d3ed60 got the lock
+Consumer: 0x560285d3ed60 is getting locked 
+Consumer: 0x560285c3df20 exit the lock 
+0x560285b78fb0 9 0x560285c3df20 1 1 0 0
+0x560285b78fb0 9 0x560285bbd900 1 1 0 0
+Consumer: 0x560285c3df20 finished remove
+Consumer: 0x560285c3df20 1 -1
+Consumer: 0x560285c3df20 attemp to remove
+Consumer: 0x560285bbd900 enters1
+10 0x560285bfdc10 1 0 0 0
+10 0x560285c3df20 1 0 0 0
+Producer: 0x560285bfdc10 finished to insert
+Producer: 0x560285bfdc10 attemp to insert
+Consumer: 0x560285c3df20 got the lock
+Consumer: 0x560285c3df20 is getting locked 
+Consumer: 0x560285c7e2b0 exit the lock 
+0x560285b78fb0 9 0x560285c7e2b0 1 1 0 0
+0x560285b78fb0 9 0x560285bfdc10 1 1 0 0
+Consumer: 0x560285c7e2b0 finished remove
+Consumer: 0x560285c7e2b0 2 -1
+Consumer: 0x560285c7e2b0 attemp to remove
+Consumer: 0x560285bfdc10 enters1
+10 0x560285bbd900 1 0 0 0
+10 0x560285c7e2b0 1 0 0 0
+Producer: 0x560285bbd900 finished to insert
+Producer: 0x560285bbd900 attemp to insert
+Consumer: 0x560285c7e2b0 got the lock
+Consumer: 0x560285c7e2b0 is getting locked 
+Consumer: 0x560285cbe640 exit the lock 
+0x560285b78fb0 9 0x560285cbe640 1 1 0 0
+0x560285b78fb0 9 0x560285bbd900 1 1 0 0
+Consumer: 0x560285cbe640 finished remove
+Consumer: 0x560285cbe640 2 -1
+Consumer: 0x560285cbe640 attemp to remove
+Consumer: 0x560285bbd900 enters1
+10 0x560285bfdc10 1 0 0 0
+10 0x560285cbe640 1 0 0 0
+Producer: 0x560285bfdc10 finished to insert
+Producer: 0x560285bfdc10 attemp to insert
+Consumer: 0x560285cbe640 got the lock
+Consumer: 0x560285cbe640 is getting locked 
+Consumer: 0x560285cfe9d0 exit the lock 
+0x560285b78fb0 9 0x560285cfe9d0 1 1 0 0
+0x560285b78fb0 9 0x560285bfdc10 1 1 0 0
+Consumer: 0x560285cfe9d0 finished remove
+Consumer: 0x560285cfe9d0 3 -1
+Consumer: 0x560285cfe9d0 attemp to remove
+Consumer: 0x560285bfdc10 enters1
+10 0x560285bbd900 1 0 0 0
+10 0x560285cfe9d0 1 0 0 0
+Producer: 0x560285bbd900 finished to insert
+Producer: 0x560285bbd900 attemp to insert
+Consumer: 0x560285cfe9d0 got the lock
+Consumer: 0x560285cfe9d0 is getting locked 
+Consumer: 0x560285d3ed60 exit the lock 
+0x560285b78fb0 9 0x560285d3ed60 1 1 0 0
+0x560285b78fb0 9 0x560285bbd900 1 1 0 0
+Consumer: 0x560285d3ed60 finished remove
+Consumer: 0x560285d3ed60 3 -1
+Consumer: 0x560285d3ed60 attemp to remove
+Consumer: 0x560285bbd900 enters1
+10 0x560285bfdc10 1 0 0 0
+10 0x560285d3ed60 1 0 0 0
+Producer: 0x560285bfdc10 finished to insert
+Producer: 0x560285bfdc10 attemp to insert
+Consumer: 0x560285d3ed60 got the lock
+Consumer: 0x560285d3ed60 is getting locked 
+Consumer: 0x560285c3df20 exit the lock 
+0x560285b78fb0 9 0x560285c3df20 1 1 0 0
+0x560285b78fb0 9 0x560285bfdc10 1 1 0 0
+Consumer: 0x560285c3df20 finished remove
+Consumer: 0x560285c3df20 4 -1
+Consumer: 0x560285c3df20 attemp to remove
+Consumer: 0x560285bfdc10 enters1
+10 0x560285bbd900 1 0 0 0
+10 0x560285c3df20 1 0 0 0
+Producer: 0x560285bbd900 finished to insert
+Producer: 0x560285bbd900 attemp to insert
+Consumer: 0x560285c3df20 got the lock
+Consumer: 0x560285c3df20 is getting locked 
+Consumer: 0x560285c7e2b0 exit the lock 
+0x560285b78fb0 9 0x560285c7e2b0 1 1 0 0
+0x560285b78fb0 9 0x560285bbd900 1 1 0 0
+Consumer: 0x560285c7e2b0 finished remove
+Consumer: 0x560285c7e2b0 4 -1
+Consumer: 0x560285c7e2b0 attemp to remove
+Consumer: 0x560285bbd900 enters1
+10 0x560285bfdc10 1 0 0 0
+10 0x560285c7e2b0 1 0 0 0
+Producer: 0x560285bfdc10 finished to insert
+Producer: 0x560285bfdc10 attemp to insert
+Consumer: 0x560285c7e2b0 got the lock
+Consumer: 0x560285c7e2b0 is getting locked 
+Consumer: 0x560285cbe640 exit the lock 
+0x560285b78fb0 9 0x560285cbe640 1 1 0 0
+0x560285b78fb0 9 0x560285bfdc10 1 1 0 0
+Consumer: 0x560285cbe640 finished remove
+Consumer: 0x560285cbe640 5 -1
+Consumer: 0x560285cbe640 attemp to remove
+Consumer: 0x560285bfdc10 enters1
+10 0x560285bbd900 1 0 0 0
+10 0x560285cbe640 1 0 0 0
+Producer: 0x560285bbd900 finished to insert
+Producer: 0x560285bbd900 have ended
+Consumer: 0x560285cbe640 got the lock
+Consumer: 0x560285cbe640 is getting locked 
+Consumer: 0x560285cfe9d0 exit the lock 
+0x560285b78fb0 9 0x560285cfe9d0 1 1 0 0
+0x560285b78fb0 9 0x560285bfdc10 1 1 0 0
+Consumer: 0x560285cfe9d0 finished remove
+Consumer: 0x560285cfe9d0 5 -1
+Consumer: 0x560285cfe9d0 attemp to remove
+Consumer: 0x560285bfdc10 enters1
+10 0x560285bfdc10 1 1 0 0
+10 0x560285cfe9d0 1 1 0 0
+Producer: 0x560285bfdc10 finished to insert
+Producer: 0x560285bfdc10 have ended
+Consumer: 0x560285cfe9d0 got the lock
+Consumer: 0x560285cfe9d0 is getting locked 
+inserting SENTINEL
+Consumer: 0x560285d3ed60 exit the lock 
+0x560285b78fb0 9 0x560285d3ed60 1 1 0 1
+0x560285b78fb0 9 0x7ffe07bd29a0 1 1 0 1
+Consumer: 0x560285d3ed60 finished remove
+Consumer: 0x560285d3ed60 6 -1
+Consumer: 0x560285d3ed60 attemp to remove
+Consumer: 0x7ffe07bd29a0 enters1
+10 0x7ffe07bd29a0 1 1 0 0
+10 0x560285d3ed60 1 1 0 0
+Consumer: 0x560285d3ed60 got the lock
+Consumer: 0x560285d3ed60 is getting locked 
+Consumer: 0x560285c3df20 exit the lock 
+0x560285b78fb0 9 0x560285c3df20 1 1 0 1
+0x560285b78fb0 9 0x7ffe07bd29a0 1 1 0 1
+Consumer: 0x560285c3df20 finished remove
+Consumer: 0x560285c3df20 6 -1
+Consumer: 0x560285c3df20 attemp to remove
+Consumer: 0x7ffe07bd29a0 enters1
+10 0x7ffe07bd29a0 1 1 0 0
+10 0x560285c3df20 1 1 0 0
+Consumer: 0x560285c3df20 got the lock
+Consumer: 0x560285c3df20 is getting locked 
+Consumer: 0x560285c7e2b0 exit the lock 
+0x560285b78fb0 9 0x560285c7e2b0 1 1 0 1
+0x560285b78fb0 9 0x7ffe07bd29a0 1 1 0 1
+Consumer: 0x560285c7e2b0 finished remove
+Consumer: 0x560285c7e2b0 7 -1
+Consumer: 0x560285c7e2b0 attemp to remove
+Consumer: 0x7ffe07bd29a0 enters1
+10 0x7ffe07bd29a0 1 1 0 0
+10 0x560285c7e2b0 1 1 0 0
+Consumer: 0x560285c7e2b0 got the lock
+Consumer: 0x560285c7e2b0 is getting locked 
+Consumer: 0x560285cbe640 exit the lock 
+0x560285b78fb0 9 0x560285cbe640 1 1 0 1
+0x560285b78fb0 9 0x7ffe07bd29a0 1 1 0 1
+Consumer: 0x560285cbe640 finished remove
+Consumer: 0x560285cbe640 7 -1
+Consumer: 0x560285cbe640 attemp to remove
+Consumer: 0x7ffe07bd29a0 enters1
+10 0x7ffe07bd29a0 1 1 0 0
+10 0x560285cbe640 1 1 0 0
+Consumer: 0x560285cbe640 got the lock
+Consumer: 0x560285cbe640 is getting locked 
+Consumer: 0x560285cfe9d0 exit the lock 
+0x560285b78fb0 9 0x560285cfe9d0 1 1 0 1
+0x560285b78fb0 9 0x7ffe07bd29a0 1 1 0 1
+Consumer: 0x560285cfe9d0 finished remove
+Consumer: 0x560285cfe9d0 8 -1
+Consumer: 0x560285cfe9d0 attemp to remove
+Consumer: 0x7ffe07bd29a0 enters1
+10 0x7ffe07bd29a0 1 1 0 0
+10 0x560285cfe9d0 1 1 0 0
+deleting consumers
+Consumer: 0x560285cfe9d0 got the lock
+Consumer: 0x560285cfe9d0 is getting locked 
+Consumer: 0x560285d3ed60 exit the lock 
+0x560285b78fb0 9 0x560285d3ed60 1 1 0 1
+0x560285b78fb0 9 0 0 1 0 1
+Consumer: 0x560285d3ed60 finished remove
+Consumer: 0x560285d3ed60 8 -1
+Consumer: 0x560285d3ed60 attemp to remove
+Consumer: 0 enters0
+Consumer: 0x560285d3ed60 got the lock
+Consumer: 0x560285d3ed60 exit the lock 
+0x560285b78fb0 8 0x560285d3ed60 1 1 0 1
+0x560285b78fb0 8 0 0 1 0 1
+Consumer: 0x560285d3ed60 finished remove
+Consumer: 0x560285d3ed60 9 -1
+Consumer: 0x560285d3ed60 attemp to remove
+Consumer: 0 enters0
+Consumer: 0x560285d3ed60 got the lock
+Consumer: 0x560285d3ed60 exit the lock 
+0x560285b78fb0 7 0x560285d3ed60 1 1 0 1
+0x560285b78fb0 7 0 0 1 0 1
+Consumer: 0x560285d3ed60 finished remove
+Consumer: 0x560285d3ed60 9 -1
+Consumer: 0x560285d3ed60 attemp to remove
+Consumer: 0 enters0
+Consumer: 0x560285d3ed60 got the lock
+Consumer: 0x560285d3ed60 exit the lock 
+0x560285b78fb0 6 0x560285d3ed60 1 1 0 1
+0x560285b78fb0 6 0 0 1 0 1
+Consumer: 0x560285d3ed60 finished remove
+Consumer: 0x560285d3ed60 10 -1
+Consumer: 0x560285d3ed60 attemp to remove
+Consumer: 0 enters0
+Consumer: 0x560285d3ed60 got the lock
+Consumer: 0x560285d3ed60 exit the lock 
+0x560285b78fb0 5 0x560285d3ed60 1 1 0 1
+0x560285b78fb0 5 0 0 1 0 1
+Consumer: 0x560285d3ed60 finished remove
+Consumer: 0x560285d3ed60 10 -1
+Consumer: 0x560285d3ed60 attemp to remove
+Consumer: 0 enters0
+Consumer: 0x560285d3ed60 got the lock
+Consumer: 0x560285d3ed60 exit the lock 
+0x560285b78fb0 4 0x560285d3ed60 1 1 0 1
+0x560285b78fb0 4 0 0 1 0 1
+Consumer: 0x560285d3ed60 finished remove
+Consumer: 0x560285d3ed60 -1 -1
+Consumer: 0x560285d3ed60 have ended

@@ -1,0 +1,47 @@
+bi)
+Without -O2:
+
+BUSY: 1.29u 0.00s 0:01.29r 6040kb
+NOBUSY: 1.55u 0.00s 0:01.56r 5908kb
+
+With -O2:
+
+BUSY: 1.13u 0.00s 0:01.12r 5900kb
+NOBUSY: 1.35u 0.00s 0:01.35r 5752kb
+
+bii)
+We can see that under 1 processor, it seems like BUSY waiting solution 
+is slightly faster than NOBUSY waiting solution, while -O2 also improves
+the performance of both version of solution when applied.
+
+biii)
+Without -O2:
+
+BUSY: 54.46u 0.14s 0:13.64r 6088kb
+NOBUSY: 63.10u 0.04s 0:15.78r 5828kb
+
+With -O2:
+
+BUSY: 54.32u 0.02s 0:13.58r 5900kb
+NOBUSY: 62.67u 0.08s 0:15.68r 5760kb
+
+biv)
+It has a similar result as bii), as NOBUSY seems to perform worse
+than BUSY, and O2 can improve the performance only by a little bit. 
+(in fact, O2 provide very minimum improvement when compared to previous one)
+
+bv) 
+Looking at the total blocks in the bounded buffer, we can see that there is 
+a lot more calls in NOBUSY version when compared to BUSY version under same environment.
+
+To some degree it make sense, since for NOBUSY you don't actually allow
+barging, which means you keep enter the wait() function whenever a barge happens.
+
+In comparison, BUSY waiting allows barging, which means it will happily allow 
+another task to take over though it might cause starvation. Though it causes starvation,
+in exchange there are much less call to wait(), making the whole process much faster
+
+bvi)
+We made more kernel thread, not more processors cores. Under the testing environment,
+you still have a limited amount of cores, and multi-thread could mean slower when not
+enough resources is given, because context switching / communication is costy too.

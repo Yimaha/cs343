@@ -1,0 +1,93 @@
+3a)
+--------------------------
+for ./q3 300000000 1
+shared:786433932
+shared:762826318
+shared:840156862
+shared:794007030
+shared:792468425
+shared:842932592
+shared:817067999
+shared:778518031
+shared:829369330
+shared:817597848
+--------------------------
+for ./q3 300000000 2
+shared:616064600
+shared:728435172
+shared:678015778
+shared:644017176
+shared:727493051
+shared:617983662
+shared:620791033
+shared:675317102
+shared:693389546
+shared:629156522
+
+3b)
+As described in class, the interrupt from the system is a "undetermined" behaviour
+for us. (though technically you could potentially determine the interrupt 
+if you know anything and everything about the computer and the program)
+
+So for us, each execution though will aim to reach the same results, will go through
+different process, since the code has no prevention to problem due to concurrency, 
+all 10 runs for each version should not output the same result. 
+
+Even in the case of 1 CPU, we assigned 2 different tasks to it, and task can context
+swtich between each other thus creating interrupt, which is another source of concurrency
+(concurrency execution of the thread)
+
+3c)
+Suppose in the most optimal case, where every task is operating correctly, no interrupt that mess up the 
+shared +=1, no 2 task running at the same time due to multiple cpu, everything is chill, and nice, and amazing,
+we will have shared = the amount of task*iterations*2 = 2*100000000*2 = 400000000. This is the maximum value that
+could be potentially printed out by the program. However if you tell me there is a bigger chance for me winning the 
+lottery vs the program actually output 400000000, I would believe it.
+
+Suppose that we are the lest optimal case, where interrupt just flying around everywhere, 
+we could potentially get a really bad case. take a look at the assembly language posted in class:
+
+ld r1, i 
+... // PREEMPTION
+add r1, #1
+... // PREEMPTOIN
+st r1, i
+
+I will not do the formal proof since it is not requried,
+but the lowest value possible should be 2. The thought process is that given 2 tasks with
+100000000 call each, how many calls can realistically be avoided given that all 100000000 for each
+task has to be processed? Suppose there exists 2 task A, B, where A Execute
+
+ld r1, i 
+add r1, #1
+... // PREEMPTOIN
+
+then it got preempted. then B execute the whole block a total of 99999999 times to completion.
+Then it context switch back to A, which execute
+
+... // PREEMPTOIN
+st r1, i
+
+now i is back to 1, now we context switch to B and execute
+
+ld r1, i 
+add r1, #1
+... // PREEMPTOIN
+
+then it got preempted, then A execute the rest of it's execution to completion, should be another 99999999 times.
+Now it context switch back to B
+
+... // PREEMPTOIN
+st r1, i
+
+Now r1 stores only 2, thus i becomes 2.
+
+Thus. the lowest value possible is 2 for i
+
+3d)
+In the case where we have 2 cpu used for the program, we observe that the shared value is even lower
+than the case where we have 1cpu, since 2 cpu means more resources, and gives the task the possibility
+to run simultaneously (which is not good, since if 2 task running simultaneously one of the task value 
+could be over written by the other one) on top of the interrupt during the 1 cpu case, thus it is more likely
+that an increment is lose in the process, which ended up making the total shared variable less.
+

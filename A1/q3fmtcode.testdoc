@@ -1,0 +1,242 @@
+The program takes an input stream and check if every line within 
+input stream is a legal formatting option for printf in C language.
+It output yes if it does, no if doesn't. Note that it is possible to have
+leftover character on the line once yes or no is triggered, in this case,
+" - extraneous characters ’[rest of line]’" will be printed.
+
+USER INTERFACE TESTING
+  TEST 1:
+  -------
+    DATA DESCRIPTION
+    Test 1 is expected to test the command line interface of the program,
+    which in this case is: ./fmtcode [ input-file ]
+    where if input-file is provided it will be the input-stream, if not 
+    then program will directly read from cin.
+
+    The command-line inputs for test 1 are:
+    1) "./fmtcode"
+    2) "./fmtcode q3input.txt"
+    3) "./fmtcode doNotExists.txt"
+    4) "./fmtcode q3input.txt extra illegal argument"
+
+    TESTING RESULTS
+    Here are the results:
+    1) waiting for cin input, all input from cin executed properly until ctrl-c (which exit the program)
+    2) successful execution of the program
+    3) output: 
+        Error! Could not open input file "SHELL=/bin/bash"
+        Usage: ./fmtcode[ input-file ]
+    4) output:
+        Usage: ./fmtcode[ input-file ]
+
+    ANALYSIS
+    1)  expected result, as program should be waiting for cin to input
+    2)  expected result, as program able to open given file as input stream if exists
+    3)  expected result, as program should warn user that input file does not exists, 
+        also notify user the correct usage.
+    4)  expected result, as extra parameters are provided which violate the usage,
+        program terminated and notify user the correct usage. 
+
+    From this we can say that common condition in usage is working properly and will be
+    able to notify user what issue they might have if any is detected.
+
+
+ALGORITHM TESTING
+
+  TEST 2:
+  -------
+    DATA DESCRIPTION
+    Test 2 focuses on the int main() program, which is checking if certain functionality handled by
+    int main() is functioning normally, that includes but not limited to:
+        1. detect if there an empty line is the input ("\n")
+        3. able to catch both yes/no properly
+        4. able to add extraneous notification if left over are detected (thus knowing the full line content as well)
+
+    Thus the following content would be in input.txt
+    -------
+     1	
+     2	%d
+     3	%B
+     4	%dextracontent
+     5	%Bextracontent
+    -------
+
+    notice that the first line is empty, which is for empty case, then we feed in
+    2 obviously yes/no case follow by their corresponding extraneous content
+
+    TESTING RESULT
+    -------
+     1	'' : Warning! Blank line.
+     2	'%d' : '%d' yes
+     3	'%B' : '%B' no
+     4	'%dextracontent' : '%d' yes - extraneous characters 'extracontent'
+     5	'%Bextracontent' : '%B' no - extraneous characters 'extracontent'
+    -------
+
+    ANALYSIS
+    1)  line 1 shows the empty space result is being caught by main and reported correctly
+    2)  line 2 - 3 shows yes/no case is being caught correctly
+    3)  line 4 - 5 shows yes/no case when caught correctly still detect extraneous content
+
+
+    Though basic, from this we can say that the expected functionality 
+    from int main() is functioning normally
+
+  TEST 3:
+  -------
+    DATA DESCRIPTION
+    Now we move on the the juice of the meat, that is the q3fmtcode.cc.
+    In Test3, we will focus on the particular interaction between few special
+    specifier and their limitation toward width, precision, and length.
+
+    It is known that:
+    1) specifier '%' must be immediately follow by a % with absolutely nothing in between
+    2) specifier 'n' cannot couple with either width or precision
+    3) specifier 'p', 'c' cannot couple with precision
+
+    With these special cases in mind, we will have the following testfile
+    
+    -------
+     1  %%
+     2  %*%
+     3  %.%
+     4  %h%
+     5  %*n
+     6  %.n
+     7  %n
+     8  %.p
+     9  %.c
+    10  %p
+    11  %c
+    -------
+    TESTING RESULT
+    -------
+     1	'%%' : '%%' yes
+     2	'%*%' : '%*%' no
+     3	'%.%' : '%.%' no
+     4	'%h%' : '%h%' no
+     5	'%*n' : '%*n' no
+     6	'%.n' : '%.n' no
+     7	'%n' : '%n' yes
+     8	'%.p' : '%.p' no
+     9	'%.c' : '%.c' no
+    10	'%p' : '%p' yes
+    11	'%c' : '%c' yes
+    -------
+
+    ANALYSIS
+    1)  the first 4 lines showed that '%%' is the only possible format the passes, anything
+        anything in between will result in a no immediately
+    2)  lines 5 - 7 showed that specifier 'n' is getting correctly identified, but both 
+        width and precision if added to the front are immediately rejected
+    3)  the rest of the lines showed that 'p', 'c' is being identified correctly, but
+        precision is added the program immediately rejects
+
+    Based on thes observation, we can conclude that specifier interaction is being implemented
+    properly.
+
+  TEST 4:
+  -------
+    DATA DESCRIPTION
+    Similar to test 3, Test 4 also focus on specifier interaction, but this time in particular 
+    it focuses on the interaction between specifier and length.
+
+    Though a table is provided in cppreference.com, it doesn't line up with the 
+    executable given to us properly due to version differences between different c++ compilers
+
+    It is known that:
+    1) length 'l' does not work with specifier 'p'
+    2) length 'L' does not work with specifier 'c', 's', 'p', 'n'
+    3) rest of the specifiers does not work specifier 'f', 'F', 'e', 'E', 'g', 'G', 'a', 'A', 'c', 's', 'p'
+
+    With these special cases in mind, we will have the following testfile
+
+    ( Note that in case 3, in order to minimize the testsets and avoid exhaustive testing, 
+    we will only use specifier 't' as a reference )
+
+    -------
+     1	%lp
+     2	%Lc
+     3	%Ls
+     4	%Lp
+     5	%Ln
+     6	%tf
+     7	%tF
+     8	%te
+     9	%tE
+    10	%tg
+    11	%tG
+    12	%ta
+    13	%tA
+    14	%tc
+    15	%ts
+    16	%tp
+    -------
+    TESTING RESULT
+    -------
+     1	'%lp' : '%lp' no
+     2	'%Lc' : '%Lc' no
+     3	'%Ls' : '%Ls' no
+     4	'%Lp' : '%Lp' no
+     5	'%Ln' : '%Ln' no
+     6	'%tf' : '%tf' no
+     7	'%tF' : '%tF' no
+     8	'%te' : '%te' no
+     9	'%tE' : '%tE' no
+    10	'%tg' : '%tg' no
+    11	'%tG' : '%tG' no
+    12	'%ta' : '%ta' no
+    13	'%tA' : '%tA' no
+    14	'%tc' : '%tc' no
+    15	'%ts' : '%ts' no
+    16	'%tp' : '%tp' no
+
+    -------
+
+    ANALYSIS
+
+    We see that every single test is no, which is expected
+
+    Based on thes observation, we conclude that specifier and length interaction is working normally
+  
+  TEST 5:
+  -------
+    DATA DESCRIPTION
+    In TEST 5, we listed a few specific edge cases that does't really belong to any specific sets:
+
+    1) when % is not even given as the first char, it should immediately throw Error
+    2) when % is not followed by anything, it should throw Error as well
+    3) when % is followed by any illegal grammar, it should throw Error as well
+    4) empty space should be respected as a character as well
+
+    With these special cases in mind, we will have the following testfile 
+    (note the line 4, 5 are NOT identical, 1 has more space appended behind d, the other don't)
+
+    -------
+     1	Error
+     2	%
+     3	%WRONG
+     4	% d
+     5	% d  
+    -------
+    TESTING RESULT
+    -------
+     1	'Error' : 'E' no - extraneous characters 'rror'
+     2	'%' : '%' no
+     3	'%WRONG' : '%W' no - extraneous characters 'RONG'
+     4	'% d' : '% ' no - extraneous characters 'd'
+     5	'% d  ' : '% ' no - extraneous characters 'd  '
+    -------
+
+    ANALYSIS
+    1)  from line 1, we can see that E is being caught immediately and rest is 
+        being reported as extraneous character which is perfect
+    2)  from line 2, we can see that % followed by nothing is hard rejected
+    3)  from line 3, we can see that % followed by Illegal grammar is also hard 
+        rejected with extraneous character printed
+    4)  from line 4 - 5 we can see that % followed by space is also illegal grammar, 
+        and extraneous space is getting picked up too
+
+
+
+

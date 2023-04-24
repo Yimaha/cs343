@@ -1,0 +1,230 @@
+
+The program create a list of filter with various purpose to modify a piece of text
+either feed in from user defined input or cin to user defined output or cout. 
+It is expected that input and output already exists, otherwise it will throw exception.
+
+There are a total of 5 types of filter implmeneted, other than the basic Reader, Writer, 
+there is a filterNumber(-e number), filterCase(-c l|u), and filterCapitalized (-s).
+You can define any number of filters of any kind in the following fashion:
+
+./filter [ -filter-options ... ] 
+
+which will chain the filter together, and the input txt will be processed by every
+layer of filter
+
+USER INTERFACE TESTING
+  TEST 1:
+  -------
+    DATA DESCRIPTION
+    Test 1 is expected to test the command line interface of the program,
+    which in this case is: ./filter [ -filter-options ... ] [ infile [outfile] ]
+    There is no limit on how many filter options you can put, as long as they are correctly defined
+    Note that we are not tested on filter value, thus we can expect that
+    all filter options are passed correctly (though we still need to test, since 
+    it is possible that program is unable to handled correct parameters)
+
+    also if input-file is provided it will be the input-stream, if not 
+    then program will directly read from cin. A simular case for outfile as well
+
+    The command-line inputs for test 1 are:
+    1) "./filter"
+    2) "./filter input.txt output.txt"
+    3) "./filter input.txt"
+    4) "./filter -s -c l -c u -e 1 -e 0 -e -1"
+    5) "./filter 1 2 3 4 5 6 7 8"
+    6) "./filter inputnotexists.txt"
+
+    TESTING RESULTS
+    Here are the results:
+    1) waiting for cin input, all input from cin executed properly until ctrl-c (which exit the program)
+    2) successful execution of the program, output.txt is created
+    3) output: 
+        0 characters
+    4) waiting for cin input, all input from cin executed properly until ctrl-c (which exit the program)
+    5) output:
+        ./filter [ -filter-options ... ] [ infile [outfile] ]
+    6) output:
+        Error! Could not open input file "inputnotexists.txt"
+        Usage: ./filter [ -filter-options ... ] [ infile [outfile] ]
+
+    (Note: input.txt exists and is empty, inputnotexists.txt does not exists)
+
+    ANALYSIS
+    1)  expected result, as program should be waiting for cin to input
+    2)  expected result, as program able to open given file as input stream if exists
+    3)  expected result, as program should not output anything if input file is empty
+    4)  expected result, as program should be waiting for cin to input
+    5)  expected result, too many parameter, program should terminated and instruct correct usage
+    6)  expected result, cannot find the input file, report the error and instruct usage
+
+    From this we can say that common condition in usage is working properly and will be
+    able to notify user what issue they might have if any is detected.
+
+
+ALGORITHM TESTING
+
+  TEST 2:
+  -------
+    DATA DESCRIPTION
+    Test 2 focuses on I/O, that is the reader and writer filter of the program,
+    The main concern are:
+    1. is reader able to read in content correctly?
+    2. is writer able to output the passed content correctly?
+    3. will both peacefully terminate once the input stream is over?
+    4. will writer be able to identify empty space of all kinds? (no skiping)
+    Thus the following content would be in input.txt
+    -------
+     1
+     2
+     3
+     4
+     5      01234567890
+     6      abcdefghijklm nopqrst uvwxyz
+    -------
+
+    TESTING RESULT
+    -------
+     1
+     2
+     3
+     4
+     5      01234567890
+     6      abcdefghijklm nopqrst uvwxyz
+     7  53 characters
+    -------
+
+    ANALYSIS
+    1)  we can see that reader is reading correctly
+    2)  writer is also working correctly
+    3)  We can see that the exception is triggered correctly, 53 character is printed
+    4)  We can also see that writer did not skip any space
+
+
+    Though basic, from this we can say that the expected functionality 
+    from Reader/Writer is working normally
+
+  TEST 3:
+  -------
+    DATA DESCRIPTION
+    For Test 3, we will test the -c filter 
+
+    The specifications are: 
+    1) -c l should minimize all cases
+    2) -c u should uppercase all characters
+    3) neither of these should have any influence on non-letter characters
+
+    With these special cases in mind, we will have the following testfile
+    
+    -------
+     1  ABCDEFGHIJKLMN
+     2
+     3  `1234567890-=qwertyuiop[]\asdfghjkl;'zxcvbnm,./ ~!@#$%^&*()_+{}|:"<>?
+    -------
+    with './filter -c u input.txt' and './filter -c l input.txt' to check results
+    
+    TESTING RESULT WITH './filter -c u input.txt'
+    -------
+     1  ABCDEFGHIJKLMN
+     2
+     3  `1234567890-=QWERTYUIOP[]\ASDFGHJKL;'ZXCVBNM,./ ~!@#$%^&*()_+{}|:"<>?85 characters
+    -------
+    TESTING RESULT WITH './filter -c l input.txt'
+    -------
+     1  abcdefghijklmn
+     2
+     3  `1234567890-=qwertyuiop[]\asdfghjkl;'zxcvbnm,./ ~!@#$%^&*()_+{}|:"<>?85 characters
+    -------
+    ANALYSIS
+    1)  we can see that the lower case filter is working correctly, as it put all the upper case to lower case
+    2)  we can see that the upper case filter is working correctly, as it put all the lower case to upper case
+    3)  all other character are ignored by the filter
+
+Thus, we can see that the -u filter is working correctly with either parameter
+
+  TEST 4:
+  -------
+    DATA DESCRIPTION
+    Similar to test 3, Test 4 also focus on specifier interaction, this time for filter -e number
+    It is known that:
+
+    1) -e positive / negative should give that character that position shift in alphabet
+    2) -e 0 should not have impact (at least until 13th character)
+    3) every 13 consecutive characters of any kind, it increase / decrease the filter based on number
+    4) Rule should work the same with either Upper or Lower case
+    5) the shift should also wrap around once reaching the end (z + 1 = a, a - 1 = z)
+
+    With these special cases in mind, we will have the following testfile
+    with './filter -e 1 input.txt', './filter -e 0 input.txt', './filter -e -1 input.txt'
+    -------
+     1  ABCDEFG HIJKLMN OPQRSTU VWXYZ
+     2  abcdefg hijklmn opqrstu vwxyz
+    -------
+    TESTING RESULT './filter -e 1 input.txt'
+    -------
+     1  BCDEFGH IJKLMOP QRSTUVW XYABC
+     2  defghij kmnopqr stuvwxz abcde
+     3  60 characters
+    -------
+    TESTING RESULT './filter -e 0 input.txt'
+    -------
+     1  ABCDEFG HIJKLNO PQRSTUV WXZAB
+     2  cdefghi jlmnopq rstuvwy zabcd
+     3  60 characters
+    -------
+    TESTING RESULT './filter -e -1 input.txt'
+    -------
+     1  ZABCDEF GHIJKKL MNOPQRS TUUVW
+     2  xyzabcd eefghij klmnopp qrstu
+     3  60 characters
+    -------
+    ANALYSIS
+
+    1) for both positive and negative, we can see that the encryption is happening in the correct direction
+    2) -e 0 does have no impact until 13 character is read then increment by 1
+    3) every 13 character the number increase by 1, it is observed for all 3 cases
+    4) Both upper case and lower case are effected, thus it is working correctly
+    5) the shift does go from a -> z or z -> a on correct occasion 
+
+    Thus we conclude that this filter is working correctly (also has same output as executable)
+  
+  TEST 5:
+  -------
+    DATA DESCRIPTION
+    In TEST 5, -s filter is tested, in particular:
+
+    1) it should upper case the first Letter char regardless if it is the first character
+    2) !, . , or ? followed by space of any kind should trigger uppercase
+    3) upper space should not influence anything but letter character
+
+    With these special cases in mind, we will have the following testfile 
+    (note the line 4, 5 are NOT identical, 1 has more space appended behind d, the other don't)
+
+    -------
+     1
+     2
+     3     
+     4     
+     5     
+     6     123wow! this is amazing!             can you believe it? 123oh no. ywY
+    -------
+    TESTING RESULT
+    -------
+     1
+     2
+     3     
+     4     
+     5     
+     6     123Wow! This is amazing!             Can you believe it? 123oh no. YwY84 characters
+    -------
+
+    ANALYSIS
+    1)  We can see that the word Wow is capitalized even though there are space 
+        and number ahead of it thus it is working correctly
+    2)  We can see that every case where the condition is satisfied, 
+        first character when is letter goes upper case
+    3)  We also see that for 123oh, even though condition is satisfied, 
+        but the first character is a number, thus nothing happens.
+
+
+
+

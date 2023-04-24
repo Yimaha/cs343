@@ -1,0 +1,57 @@
+
+1bi) 
+The 8 timing results are:
+---regular---
+./exception 6.28u 0.00s 0:06.28
+./returnglobal 6.47u 0.00s 0:06.47
+./returntype 26.31u 0.00s 0:26.32
+./returntypec 6.32u 0.00s 0:06.32
+---with -O2---
+./exception 5.25u 0.00s 0:05.26
+./returnglobal 5.30u 0.00s 0:05.31
+./returntype 6.62u 0.00s 0:06.63
+./returntypec 5.75u 0.00s 0:05.75
+
+
+1bii) 
+There is no much of a difference between the original and the transformed 
+program, except that ./returntype took exceptionally long when compared to others.
+
+The I believe that the cause to exceptionally long execution time for ./returntype
+is due to the repeated checking for alternatvie and the repeated extraction of value of specific type
+in rtn3, which is called everyloop.
+
+1biii) When it comes to compiler optimized version of all executable, we see that the 
+differences in execution time sharply decreased. Though ./returntype still took
+the longest due to previously mentioned issue, 6.62u is a great
+improvment from 26.31u
+
+1ci) 
+the 12 timing results are:
+--1000--
+./exception 5.61u 0.00s 0:05.61
+./returnglobal 5.34u 0.00s 0:05.35
+./returntype 6.53u 0.00s 0:06.54
+./returntypec 5.60u 0.00s 0:05.61
+--100--
+./exception 10.21u 0.00s 0:10.22
+./returnglobal 5.29u 0.00s 0:05.29
+./returntype 6.85u 0.00s 0:06.85
+./returntypec 5.41u 0.00s 0:05.42
+--50--
+./exception 15.80u 0.00s 0:15.80
+./returnglobal 5.37u 0.00s 0:05.37
+./returntype 6.47u 0.00s 0:06.47
+./returntypec 5.52u 0.00s 0:05.52
+
+1cii) 
+To my surprise, the original program tends to perform worse as the eperiod decreases,
+which also means that exception are being triggered more regularly. This
+makes sense, since as described in the leture, modern language handle exception in 
+a way such that the cost for try-catch block entry and exit are cheap, but
+actually catching the exception is expensive, thus the more exception it caught less 
+efficient it becomes.
+
+On the other hand, all legacy method don't really care about how many exceptions are being
+throwned and exception handling is not costly, but in a more realistic setting (1b)
+try-catch block is performing quiet good. (also easier to code)

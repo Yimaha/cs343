@@ -1,0 +1,23 @@
+bi)
+        1 processer                     | 2 processor       
+MC      1.86u 0.04s 0:01.90r 35232kb    | 43.21u 0.07s 0:21.63r 35152kb
+SEM     1.90u 0.01s 0:01.91r 35364kb    | 42.33u 0.03s 0:21.17r 35236kb                      
+BAR     1.87u 0.01s 0:01.88r 35364kb    | 42.15u 0.14s 0:21.14r 35244kb
+
+For 1 processor the real time and user time is similar, cause there is exactly 1 cpu
+and we are also just using that cpu, which make sense
+
+For 2 processors, we can also see that user time is approximate 2 times of real time,
+which also makes sense since there are 2 kernel threads.
+
+bii)
+There is a huge performance difference between 1 kernel threads vs 2 kernel threads,
+in particular, the 1 kernel threads case we can easily finish within 1 - 2 seconds, while
+the 2 kernel threads case usually takes around 20 - 30 seconds. Though there is no difference
+between the locks under the same number of threads, the performance all degrade rapidly together.
+
+biii)
+again, context switching is expensive, like really, really expensive. By introducing more kernel thread, 
+we are putting a lot instruction on the exsiting program. Though when given enough CPU, kernel thread might
+improve the perforamnce, but looking at the experimental data it seems like introducing more context switching
+is not worth it.

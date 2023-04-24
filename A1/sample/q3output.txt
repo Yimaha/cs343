@@ -1,0 +1,16 @@
+     1	%lp
+     2	%Lc
+     3	%Ls
+     4	%Lp
+     5	%Ln
+     6	%tf
+     7	%tF
+     8	%te
+     9	%tE
+    10	%tg
+    11	%tG
+    12	%ta
+    13	%tA
+    14	%tc
+    15	%ts
+    16	%tp

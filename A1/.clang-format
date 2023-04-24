@@ -1,0 +1,11 @@
+IndentWidth: 4
+ColumnLimit: 150
+BraceWrapping:
+    BeforeElse: false
+SpacesInConditionalStatement: true
+SpaceAfterCStyleCast: true
+SpaceBeforeRangeBasedForLoopColon: true
+SpacesInContainerLiterals: true
+SpacesInParentheses: true
+AllowShortBlocksOnASingleLine: Always
+AllowShortIfStatementsOnASingleLine: WithoutElse

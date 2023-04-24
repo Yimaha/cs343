@@ -1,0 +1,28 @@
+%d
+%3d
+%.3d
+%3.3d
+%32.hhi
+%Ld
+%32.hh%
+%n
+%%
+%32.hhn
+%.hhn
+%3.
+%3.h
+%hhf
+%zA
+%wd
+%Lcsdfsd
+%.*d
+%*.*d
+%32.p
+asdfasfd
+%*n
+%hhc
+%avd
+ %d
+%*.*d
+%%%%
+%% %%

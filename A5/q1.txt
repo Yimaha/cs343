@@ -1,0 +1,24 @@
+Based off of the protagonist's quote it seems like the condition for the angle to move is:
+
+"unless someone is looking at the angle, angle can move"
+
+that implies the angle have the following logic: // though it is not perfectly coded
+
+
+uCondLock u[4];
+void move(i) {
+    while(True) {
+        if (someone is looking at me) {
+            u[i].wait() // if I found someone is looking at me, i wait until the person looking at me stop looking at me and wake me up
+        } 
+        dosomething() // kill, move, make scary faces etc
+        if (I no longer look at angle j) {
+            u[j].signal()
+        }
+    }
+}
+
+in this case, each individual angle is actively waiting for the opposite angle to stop looking at each other.
+That is, every one is looking at each other, so u[i] is on wait for all i, but everyone is also waiting for 
+another person to call u[j].signal(). This by definition is a deadlock, as the angles are waiting for an 
+unlock event that will never happen.

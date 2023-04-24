@@ -1,0 +1,62 @@
+V0	V1	V2	V3	V4	V5	V6	V7	V8	V9
+*******	*******	*******	*******	*******	*******	*******	*******	*******	*******
+S			S			S
+			V 0,1,2
+			B 1	S		V 0,1,2
+V 2,1,0						B 2		S
+B 3		S		V 0,2,1
+				B 4				V 2,1,0
+	S	V 0,2,1			S			B 5	S
+	V 0,2,1	B 6					S
+	B 7
+	C s		U 6
+			G s 1
+			S			U 5
+						G s 1
+U 4				U 3		S
+				G s 1
+G s 1				S
+S		U 1						U 2
+								G s 1
+	U 0	G s 1						S
+		S			V 2,0,1
+	G s 1				B 1
+	S						V 1,2,0
+							B 2		V 2,0,1
+						V 0,2,1			B 3
+			V 1,0,2			B 4
+			B 5	V 2,1,0
+V 2,1,0				B 6
+B 7
+C p					U 6
+					G p 2
+					S	U 3	U 5		U 4
+							G p 2
+							S		G p 2
+			U 2						S
+U 0			G p 2	U 1		G p 2
+G p 2				G p 2				V 1,0,2
+		V 0,2,1						B 1
+	V 0,1,2	B 2
+	B 3				V 0,1,2
+					B 4		V 2,0,1
+							B 5		V 0,1,2
+			T						B 6
+			D			T
+T						D
+D				T
+				D				U 5
+		U 4						X
+	U 3	X
+	X				U 2
+					X		U 1
+							X		U 0
+								T	X
+		T						D
+	T	D
+	D				T
+					D		T
+							D		T
+									D
+*****************
+All tours started

@@ -1,0 +1,279 @@
+creating produder
+creating consumers
+deleting producers
+Producer: 0x55a5561875f0 have started
+Producer: 0x55a5561875f0 attemp to insert
+1 0x55a5561875f0 1 1 1
+Producer: 0x55a5561875f0 finished to insert
+Producer: 0x55a5561875f0 attemp to insert
+2 0x55a5561875f0 1 1 1
+Producer: 0x55a5561875f0 finished to insert
+Producer: 0x55a5561875f0 attemp to insert
+3 0x55a5561875f0 1 1 1
+Producer: 0x55a5561875f0 finished to insert
+Producer: 0x55a5561875f0 attemp to insert
+4 0x55a5561875f0 1 1 1
+Producer: 0x55a5561875f0 finished to insert
+Producer: 0x55a5561875f0 attemp to insert
+5 0x55a5561875f0 1 1 1
+Producer: 0x55a5561875f0 finished to insert
+Producer: 0x55a5561875f0 attemp to insert
+6 0x55a5561875f0 1 1 1
+Producer: 0x55a5561875f0 finished to insert
+Producer: 0x55a5561875f0 attemp to insert
+7 0x55a5561875f0 1 1 1
+Producer: 0x55a5561875f0 finished to insert
+Producer: 0x55a5561875f0 attemp to insert
+8 0x55a5561875f0 1 1 1
+Producer: 0x55a5561875f0 finished to insert
+Producer: 0x55a5561875f0 attemp to insert
+9 0x55a5561875f0 1 1 1
+Producer: 0x55a5561875f0 finished to insert
+Producer: 0x55a5561875f0 attemp to insert
+10 0x55a5561875f0 1 1 1
+Producer: 0x55a5561875f0 finished to insert
+Producer: 0x55a5561875f0 have ended
+Producer: 0x55a5561c7900 have started
+Producer: 0x55a5561c7900 attemp to insert
+Producer: 0x55a556207c10 have started
+Producer: 0x55a556207c10 attemp to insert
+Consumer: 0x55a556247f20 have started
+Consumer: 0x55a556247f20 attemp to remove
+9 0x55a556247f20 1 0 1
+Consumer: 0x55a556247f20 finished remove
+Consumer: 0x55a556247f20 1 -1
+Consumer: 0x55a556247f20 attemp to remove
+Consumer: 0x55a5562882b0 have started
+Consumer: 0x55a5562882b0 attemp to remove
+Consumer: 0x55a5562c8640 have started
+Consumer: 0x55a5562c8640 attemp to remove
+Consumer: 0x55a5563089d0 have started
+Consumer: 0x55a5563089d0 attemp to remove
+Consumer: 0x55a556348d60 have started
+Consumer: 0x55a556348d60 attemp to remove
+0x55a5561c7900 1
+10 0x55a5561c7900 1 0 1
+Producer: 0x55a5561c7900 finished to insert
+Producer: 0x55a5561c7900 attemp to insert
+9 0x55a556247f20 1 0 1
+Consumer: 0x55a556247f20 finished remove
+Consumer: 0x55a556247f20 2 -1
+Consumer: 0x55a556247f20 attemp to remove
+8 0x55a5562882b0 1 1 1
+Consumer: 0x55a5562882b0 finished remove
+Consumer: 0x55a5562882b0 3 -1
+Consumer: 0x55a5562882b0 attemp to remove
+7 0x55a5562c8640 1 1 1
+Consumer: 0x55a5562c8640 finished remove
+Consumer: 0x55a5562c8640 4 -1
+Consumer: 0x55a5562c8640 attemp to remove
+6 0x55a5563089d0 1 1 1
+Consumer: 0x55a5563089d0 finished remove
+Consumer: 0x55a5563089d0 5 -1
+Consumer: 0x55a5563089d0 attemp to remove
+5 0x55a556348d60 1 1 1
+Consumer: 0x55a556348d60 finished remove
+Consumer: 0x55a556348d60 6 -1
+Consumer: 0x55a556348d60 attemp to remove
+6 0x55a5561c7900 1 1 1
+Producer: 0x55a5561c7900 finished to insert
+Producer: 0x55a5561c7900 attemp to insert
+0x55a556207c10 1
+7 0x55a556207c10 1 1 1
+Producer: 0x55a556207c10 finished to insert
+Producer: 0x55a556207c10 attemp to insert
+6 0x55a556247f20 1 1 1
+Consumer: 0x55a556247f20 finished remove
+Consumer: 0x55a556247f20 7 -1
+Consumer: 0x55a556247f20 attemp to remove
+5 0x55a5562882b0 1 1 1
+Consumer: 0x55a5562882b0 finished remove
+Consumer: 0x55a5562882b0 8 -1
+Consumer: 0x55a5562882b0 attemp to remove
+4 0x55a5562c8640 1 1 1
+Consumer: 0x55a5562c8640 finished remove
+Consumer: 0x55a5562c8640 9 -1
+Consumer: 0x55a5562c8640 attemp to remove
+3 0x55a5563089d0 1 1 1
+Consumer: 0x55a5563089d0 finished remove
+Consumer: 0x55a5563089d0 10 -1
+Consumer: 0x55a5563089d0 attemp to remove
+2 0x55a556348d60 1 1 1
+Consumer: 0x55a556348d60 finished remove
+Consumer: 0x55a556348d60 1 -1
+Consumer: 0x55a556348d60 attemp to remove
+3 0x55a5561c7900 1 1 1
+Producer: 0x55a5561c7900 finished to insert
+Producer: 0x55a5561c7900 attemp to insert
+4 0x55a556207c10 1 1 1
+Producer: 0x55a556207c10 finished to insert
+Producer: 0x55a556207c10 attemp to insert
+3 0x55a556247f20 1 1 1
+Consumer: 0x55a556247f20 finished remove
+Consumer: 0x55a556247f20 2 -1
+Consumer: 0x55a556247f20 attemp to remove
+2 0x55a5562882b0 1 1 1
+Consumer: 0x55a5562882b0 finished remove
+Consumer: 0x55a5562882b0 1 -1
+Consumer: 0x55a5562882b0 attemp to remove
+1 0x55a5562c8640 1 1 1
+Consumer: 0x55a5562c8640 finished remove
+Consumer: 0x55a5562c8640 3 -1
+Consumer: 0x55a5562c8640 attemp to remove
+0 0x55a5563089d0 1 1 1
+Consumer: 0x55a5563089d0 finished remove
+Consumer: 0x55a5563089d0 2 -1
+Consumer: 0x55a5563089d0 attemp to remove
+1 0x55a5561c7900 1 1 0
+Producer: 0x55a5561c7900 finished to insert
+Producer: 0x55a5561c7900 attemp to insert
+2 0x55a556207c10 1 1 1
+Producer: 0x55a556207c10 finished to insert
+Producer: 0x55a556207c10 attemp to insert
+1 0x55a556247f20 1 1 1
+Consumer: 0x55a556247f20 finished remove
+Consumer: 0x55a556247f20 4 -1
+Consumer: 0x55a556247f20 attemp to remove
+0 0x55a5562882b0 1 1 1
+Consumer: 0x55a5562882b0 finished remove
+Consumer: 0x55a5562882b0 3 -1
+Consumer: 0x55a5562882b0 attemp to remove
+0x55a556348d60 1
+1 0x55a5561c7900 1 1 0
+Producer: 0x55a5561c7900 finished to insert
+Producer: 0x55a5561c7900 attemp to insert
+2 0x55a556207c10 1 1 0
+Producer: 0x55a556207c10 finished to insert
+Producer: 0x55a556207c10 attemp to insert
+1 0x55a556247f20 1 1 0
+Consumer: 0x55a556247f20 finished remove
+Consumer: 0x55a556247f20 5 -1
+Consumer: 0x55a556247f20 attemp to remove
+0 0x55a5562882b0 1 1 0
+Consumer: 0x55a5562882b0 finished remove
+Consumer: 0x55a5562882b0 4 -1
+Consumer: 0x55a5562882b0 attemp to remove
+0x55a5562c8640 1
+1 0x55a5561c7900 1 1 0
+Producer: 0x55a5561c7900 finished to insert
+Producer: 0x55a5561c7900 attemp to insert
+0x55a5563089d0 1
+0 0x55a5563089d0 1 1 0
+Consumer: 0x55a5563089d0 finished remove
+Consumer: 0x55a5563089d0 6 -1
+Consumer: 0x55a5563089d0 attemp to remove
+1 0x55a556207c10 1 1 0
+Producer: 0x55a556207c10 finished to insert
+Producer: 0x55a556207c10 attemp to insert
+0 0x55a556247f20 1 1 1
+Consumer: 0x55a556247f20 finished remove
+Consumer: 0x55a556247f20 5 -1
+Consumer: 0x55a556247f20 attemp to remove
+0x55a556348d60 1
+1 0x55a5561c7900 1 1 0
+Producer: 0x55a5561c7900 finished to insert
+Producer: 0x55a5561c7900 attemp to insert
+0 0x55a5563089d0 1 1 0
+Consumer: 0x55a5563089d0 finished remove
+Consumer: 0x55a5563089d0 7 -1
+Consumer: 0x55a5563089d0 attemp to remove
+0x55a5562c8640 1
+1 0x55a556207c10 1 1 0
+Producer: 0x55a556207c10 finished to insert
+Producer: 0x55a556207c10 attemp to insert
+0 0x55a556247f20 1 1 0
+Consumer: 0x55a556247f20 finished remove
+Consumer: 0x55a556247f20 6 -1
+Consumer: 0x55a556247f20 attemp to remove
+0x55a5562882b0 1
+1 0x55a5561c7900 1 1 0
+Producer: 0x55a5561c7900 finished to insert
+Producer: 0x55a5561c7900 attemp to insert
+0 0x55a5563089d0 1 1 0
+Consumer: 0x55a5563089d0 finished remove
+Consumer: 0x55a5563089d0 8 -1
+Consumer: 0x55a5563089d0 attemp to remove
+0x55a556348d60 1
+1 0x55a556207c10 1 1 0
+Producer: 0x55a556207c10 finished to insert
+Producer: 0x55a556207c10 attemp to insert
+0 0x55a556247f20 1 1 0
+Consumer: 0x55a556247f20 finished remove
+Consumer: 0x55a556247f20 7 -1
+Consumer: 0x55a556247f20 attemp to remove
+0x55a5562c8640 1
+1 0x55a5561c7900 1 1 0
+Producer: 0x55a5561c7900 finished to insert
+Producer: 0x55a5561c7900 attemp to insert
+0 0x55a5563089d0 1 1 0
+Consumer: 0x55a5563089d0 finished remove
+Consumer: 0x55a5563089d0 9 -1
+Consumer: 0x55a5563089d0 attemp to remove
+0x55a5562882b0 1
+1 0x55a556207c10 1 1 0
+Producer: 0x55a556207c10 finished to insert
+Producer: 0x55a556207c10 attemp to insert
+0 0x55a556247f20 1 1 0
+Consumer: 0x55a556247f20 finished remove
+Consumer: 0x55a556247f20 8 -1
+Consumer: 0x55a556247f20 attemp to remove
+0x55a556348d60 1
+1 0x55a5561c7900 1 1 0
+Producer: 0x55a5561c7900 finished to insert
+Producer: 0x55a5561c7900 have ended
+0 0x55a5563089d0 1 1 0
+Consumer: 0x55a5563089d0 finished remove
+Consumer: 0x55a5563089d0 10 -1
+Consumer: 0x55a5563089d0 attemp to remove
+0x55a5562c8640 1
+1 0x55a556207c10 1 1 0
+Producer: 0x55a556207c10 finished to insert
+Producer: 0x55a556207c10 attemp to insert
+0 0x55a556247f20 1 1 0
+Consumer: 0x55a556247f20 finished remove
+Consumer: 0x55a556247f20 9 -1
+Consumer: 0x55a556247f20 attemp to remove
+0x55a5562882b0 1
+0x55a556348d60 1
+1 0x55a556207c10 1 1 0
+Producer: 0x55a556207c10 finished to insert
+Producer: 0x55a556207c10 have ended
+0 0x55a556247f20 1 1 0
+Consumer: 0x55a556247f20 finished remove
+Consumer: 0x55a556247f20 10 -1
+Consumer: 0x55a556247f20 attemp to remove
+inserting SENTINEL
+0x55a5562c8640 1
+1 0x7ffda2f47930 1 1 0
+0x55a5562882b0 1
+0 0x55a5562882b0 1 1 0
+Consumer: 0x55a5562882b0 finished remove
+Consumer: 0x55a5562882b0 -1 -1
+Consumer: 0x55a5562882b0 have ended
+1 0x7ffda2f47930 1 1 0
+0x55a5563089d0 1
+0 0x55a5563089d0 1 1 0
+Consumer: 0x55a5563089d0 finished remove
+Consumer: 0x55a5563089d0 -1 -1
+Consumer: 0x55a5563089d0 have ended
+1 0x7ffda2f47930 1 1 0
+0x55a556348d60 1
+0 0x55a556348d60 1 1 0
+Consumer: 0x55a556348d60 finished remove
+Consumer: 0x55a556348d60 -1 -1
+Consumer: 0x55a556348d60 have ended
+1 0x7ffda2f47930 1 1 0
+0x55a5562c8640 1
+0 0x55a5562c8640 1 1 0
+Consumer: 0x55a5562c8640 finished remove
+Consumer: 0x55a5562c8640 -1 -1
+Consumer: 0x55a5562c8640 have ended
+1 0x7ffda2f47930 1 1 0
+deleting consumers
+0x55a556247f20 1
+0 0x55a556247f20 1 1 1
+Consumer: 0x55a556247f20 finished remove
+Consumer: 0x55a556247f20 -1 -1
+Consumer: 0x55a556247f20 have ended
+165
+21
